@@ -1,5 +1,5 @@
 {
-	"name": "tlokuus/php-minecraft-query",
+	"name": "xpaw/php-minecraft-query",
 	"description": "PHP library to query Minecraft servers",
 	"license": "MIT",
 	"keywords":
