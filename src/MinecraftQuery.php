@@ -243,11 +243,12 @@ class MinecraftQuery
 			'Protocol'   => $Data[ 2 ],
 			'Version'    => $Data[ 3 ],
 			'Players'    => $Data[ 4 ],
-			'MaxPlayers' => $Data[ 5 ],
-			'Unknown2'   => $Data[ 6 ], // TODO: What is this?
+			'MaxPlayers' => $Data[ 5 ]
+			// Removed to work on lower versions of the protocol
+			/*'Unknown2'   => $Data[ 6 ], // TODO: What is this?
 			'Map'        => $Data[ 7 ],
 			'GameMode'   => $Data[ 8 ],
-			'Unknown3'   => $Data[ 9 ], // TODO: What is this?
+			'Unknown3'   => $Data[ 9 ], // TODO: What is this?*/
 		];
 		$this->Players = null;
 	}
