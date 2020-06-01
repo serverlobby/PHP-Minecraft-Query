@@ -215,7 +215,7 @@ class MinecraftQuery
 
 		$Data = \fread( $this->Socket, 4096 );
 
-		if( $Data === false )
+		if( ! $Data )
 		{
 			throw new MinecraftQueryException( "Failed to read from socket." );
 		}
@@ -235,6 +235,10 @@ class MinecraftQuery
 
 		// TODO: If server-name contains a ';' it is not escaped, and will break this parsing
 		$Data = \explode( ';', $Data );
+
+		if (count($Data) < 6)
+			throw new MinecraftQueryException( "Invali data: count($Data) < 6" );
+			
 
 		$this->Info =
 		[
